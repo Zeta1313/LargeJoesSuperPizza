@@ -13,13 +13,15 @@
 <body>
     <main>
         <header>
-            <h1>Large Joe's super Pizza (DEFUNCT)</h1>
-            <p id="tagline">Currently closed due to 74 complaints from the health inspection department</p>
             <img src="Images/Mascot.png" alt="Pizza Mascot" id ="mascot">
+            <h1>Large Joe's Super Pizza (DEFUNCT)</h1>
+            <p id="tagline">Currently closed due to 74 complaints from the health inspection department</p>
+            <a id="main-button" href="#" role="button"> Contact us (Currently offline)</a>
             <hr>
         </header>
+        <div id="warning">
         <p>Large Joe's super Pizza is closed idefinitely due to exessive health issues. As of 9/1/2005 there are no plans for repoening. Customers are discouraged from visitng the location due to structural issues with the building, and the Health department encourages them to instead purchase Pizza from a reputable restaurant.</p>
-        <a id="main-button" href="#" role="button"> Contact us (Currently offline)</a>
+        </div>
         <form id = "pizza-form" action = "#" method="get">
             <fieldset>
                 <legend> Contact Info (Do not use) </legend>
@@ -29,6 +31,18 @@
                 <input type = "text" id="lname" name="lname">
                 <label for="pnum">Phone Number:</label>
                 <input type = "text" id="pnum" name="pnum">
+            </fieldset>
+            <fieldset>
+                <legend> Pickup or Delivery? (Do not use)</legend>
+                <label for = "pickup">
+                    <input type="radio" id = "delivery" name="method" valye = "delivery"> Delivery
+                </label>
+                <label for = "pickup">
+                    <input type="radio" id = "pickup" name="method" value = "pickup"> Pickup
+                </label>
+            </fieldset>
+            <fieldset>
+                <button type = "submit"> Order!(Do not use) </button>
             </fieldset>
         </form>
     </main>
