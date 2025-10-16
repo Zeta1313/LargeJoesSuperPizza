@@ -89,3 +89,9 @@ label {
         width: 90%;
     }
 }
+
+.error {
+    color: darkred;
+    margin: 50px;
+    display:none;
+}

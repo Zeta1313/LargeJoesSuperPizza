@@ -6,9 +6,8 @@
     <title>Large Joe's super Pizza (DEFUNCT)</title>
     <!-- Stolen Icon -->
     <link rel="icon" href="Images/Pizza.png">
-
-    <!-- Copied CSS -->
      <link rel="stylesheet" href="ComboSuperSausage.CSS">
+     <script src="js/pizza.js" defer></script>
 </head>
 <body>
     <main>
@@ -27,10 +26,13 @@
                 <legend> Contact Info (Do not use) </legend>
                 <label for="fname">First Name:</label>
                 <input type = "text" id="fname" name="fname">
+                <span id="er-fname" class="error">Stop spamming the button if the field is blank. Actually, don't press the button at all</span>
                 <label for="lname">Last Name:</label>
                 <input type = "text" id="lname" name="lname">
+                <span id="er-lname" class="error">No really, stop</span>
                 <label for="pnum">Phone Number:</label>
                 <input type = "text" id="pnum" name="pnum">
+                <span id="er-email" class="error">What did I just say?/span>
             </fieldset>
             <fieldset>
                 <legend> Pickup or Delivery? (Do not use)</legend>
@@ -42,7 +44,7 @@
                 </label>
             </fieldset>
             <fieldset>
-                <button type = "submit"> Order!(Do not use) </button>
+                <button type = "submit" id = "pizza-form"> Order!(Do not use) </button>
             </fieldset>
         </form>
     </main>
