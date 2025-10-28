@@ -15,13 +15,13 @@
             <img src="Images/Mascot.png" alt="Pizza Mascot" id ="mascot">
             <h1>Large Joe's Super Pizza (DEFUNCT)</h1>
             <p id="tagline">Currently closed due to 74 complaints from the health inspection department</p>
-            <a id="main-button" href="#" role="button"> Contact us (Currently offline)</a>
+            <a id="main-button" href="/contact-us" role="button"> Contact us (Currently offline)</a>
             <hr>
         </header>
         <div id="warning">
         <p>Large Joe's super Pizza is closed idefinitely due to exessive health issues. As of 9/1/2005 there are no plans for repoening. Customers are discouraged from visitng the location due to structural issues with the building, and the Health department encourages them to instead purchase Pizza from a reputable restaurant.</p>
         </div>
-        <form id = "pizza-form" action = "#" method="get">
+        <form id = "pizza-form" action = "/submit-order" method="post">
             <fieldset>
                 <legend> Contact Info (Do not use) </legend>
                 <label for="fname">First Name:</label>
@@ -37,11 +37,41 @@
             <fieldset>
                 <legend> Pickup or Delivery? (Do not use)</legend>
                 <label for = "pickup">
-                    <input type="radio" id = "delivery" name="method" valye = "delivery"> Delivery
+                    <input type="radio" id = "delivery" name="method" value = "delivery"> Delivery
                 </label>
                 <label for = "pickup">
                     <input type="radio" id = "pickup" name="method" value = "pickup"> Pickup
                 </label>
+            </fieldset>
+            <fieldset>
+                <legend>Select Toppings</legend>
+                <label for="pepperoni">
+                    <input type="checkbox" id="pepperoni" name="toppings[]"
+                           value="pepperoni">Pepperoni
+                </label>
+                <label for="pineapple">
+                    <input type="checkbox" id="pineapple" name="toppings[]"
+                           value="pineapple">Pineapple
+                </label>
+                <label for="sausage">
+                    <input type="checkbox" id="sausage" name="toppings[]"
+                           value="sausage">Sausage
+                </label>
+                <label for="anchovies">
+                    <input type="checkbox" id="anchovies" name="toppings[]"
+                           value="anchovies">Anchovies
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <select id="size" name="size">
+                    <option value="none">-- Select a Size --</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <span id="err-size" class="error">I said STOP</span>
+
             </fieldset>
             <fieldset>
                 <button type = "submit" id = "pizza-form"> Order!(Do not use) </button>
