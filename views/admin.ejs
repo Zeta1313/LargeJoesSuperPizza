@@ -22,6 +22,28 @@
         <p>Large Joe's super Pizza is closed idefinitely due to exessive health issues. As of 9/1/2005 there are no plans for repoening. Customers are discouraged from visitng the location due to structural issues with the building, and the Health department encourages them to instead purchase Pizza from a reputable restaurant.</p>
         </div>
         <h1> Admin Page (Why are you here?)</h1>
+        <table id = "order-table" class ="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Size</th>
+                    <th>Toppings</th>
+                    <th>Method</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%orders.forEach(order => { %>
+                <tr>
+                    <td><%= order.fname %> <%= order.lname %></td>
+                    <td><%= order.pnum %></td>
+                    <td><%= order.size %></td>
+                    <td><%= order.toppings %></td>
+                    <td><%= order.method %></td>
+                </tr>
+                <%}); %>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

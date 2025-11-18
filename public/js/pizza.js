@@ -1,5 +1,4 @@
 document.getElementById('pizza-form').onsubmit = () => {
-    alert ("testing");
     clearErrors();
     let isvalid = true;
 
@@ -15,8 +14,8 @@ document.getElementById('pizza-form').onsubmit = () => {
         isvalid = false;
     }
 
-    let email = document.getElementById('email').value.trim();
-    if (!email || email.value.indexOf("@") == -1) {
+    let email = document.getElementById('pnum').value.trim();
+    if (pnum = "") {
         document.getElementById("er-email").style.display="block";
         isvalid=false;
     }
